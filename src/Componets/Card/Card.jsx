@@ -1,12 +1,9 @@
-import Modal from "../Modal/Modal.jsx";
-
-const Card = ({cat}) => {
+const Card = ({cat, onClick}) => {
     return (
-        <div>
-            <img key={cat.id} src={cat.url} alt={cat.id}
-                 className="transition-all duration-300 rounded-lg blur-xs hover:blur-none"></img>
-            <Modal cat={cat}></Modal>
+        <div className="cursor-pointer" onClick={() => onClick(cat)}>
+            <img src={cat.url} alt={`Cat ${cat.id}`} className="w-full h-auto" />
         </div>
-    )
-}
+    );
+};
+
 export default Card;

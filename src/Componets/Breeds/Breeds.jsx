@@ -25,7 +25,6 @@ const Breeds = () => {
 
         </div>
     );
-
 }
 
 export default Breeds;
